@@ -1,0 +1,54 @@
+body {
+  background: url("recipe.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #519259;
+  font-family: Nunito;
+  padding-top: 2%;
+  text-align: center;
+}
+
+.container {
+  padding: 15px 80px;
+}
+
+.h1-div {
+  border-radius: 20px;
+  margin: auto;
+  width: 80%;
+}
+
+h1 {
+  background-color: #184d47;
+  color: #fff;
+  font-family: "Varela Round";
+  font-size: 4vw;
+  font-weight: 600;
+  padding: 3%;
+  width: auto;
+}
+
+.return-button {
+  font-size: 3vw;
+}
+
+.box {
+  border-radius: 20px;
+  background: -webkit-linear-gradient(55deg, #fff1bd 50%, #a3da8d 50%);
+  margin: 20px auto 20px;
+  padding: 3% auto 5%;
+  text-align: center;
+  width: 50vw;
+}
+
+p {
+  font-size: 3vw;
+  font-weight: 600;
+  padding-top: 7%;
+}
+
+p:hover {
+  font-size: 3.2vw;
+}

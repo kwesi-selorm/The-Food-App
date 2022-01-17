@@ -1,44 +1,75 @@
 body {
-  background-color: #e4e9fd;
-  /* background-image: -webkit-linear-gradient(80deg, #96bb7c 50%, #fad586 50%); */
-  /* min-height: 700px; */
+  background: url("recipe.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #519259;
   font-family: Nunito;
   padding-top: 20%;
   text-align: center;
 
+  /*Static colored background*/
+  /*background-image: -webkit-linear-gradient(80deg, #96bb7c 50%, #fad586 50%); */
+  /* min-height: 700px; */
+
   /* CSS animation */
-  background: linear-gradient(-45deg, #c64756, #fad586, #96bb7c, #184d47);
+  /* background: linear-gradient(-45deg, #c64756, #fad586, #96bb7c, #184d47);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-  height: 100vh;
+  height: 100vh; */
 }
+
+/* Animation */
+/* @keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
 
 .container {
   padding: 15px 80px;
 }
 
 .h1-div {
-  border-radius: 10px;
+  border-radius: 20px;
   margin: auto;
-  width: 55%;
+  width: 45%;
 }
 
 h1 {
   background-color: #184d47;
   color: #fff;
   font-family: "Varela Round";
-  font-size: 3rem;
+  font-size: 5vw;
   font-weight: 600;
   padding: 10px;
 }
 
+/* .inputs {
+  
+  border-radius: 0.3rem;
+  padding: 2px;
+  padding-top: 10px;
+  width: 65vw;
+} */
+
 .input-box {
-  font-size: 1rem;
+  font-size: 1vw;
+  border: 2px solid #184d47;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  margin: auto;
   margin-bottom: 2px;
+  width: 60vw;
 }
 
 .input-box[id="ingredients"] {
@@ -52,24 +83,8 @@ h1 {
   margin-bottom: 10px;
 }
 
-/* Animation */
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 /* Mobile screen size */
 @media (max-width: 400px) {
-  h1 {
-    font-size: 3rem;
-  }
   .input-box {
     font-size: 0.7rem;
   }

@@ -44,6 +44,7 @@ app.post("/", function (req, res) {
     console.log("statusCode:", response.statusCode);
 
     let chunks = [];
+    let recipes = [];
 
     response
       .on("data", function (data) {
@@ -51,14 +52,43 @@ app.post("/", function (req, res) {
       })
       .on("end", function () {
         let data = Buffer.concat(chunks);
-        let recipeData = JSON.parse(data);
+        let rawData = JSON.parse(data);
 
-        let recipeId = recipeData[0].id;
-        let recipeTitle = recipeData[0].title;
-        let imageUrl = recipeData[0].image;
+        let [a, b, ...otherRecipes] = rawData;
+        let recipeData = [a, b, ...otherRecipes];
 
-        console.log(typeof recipeData);
-        console.log(recipeId, recipeTitle, imageUrl);
+        //Display the fetched recipe details
+        for (let i = 0; i < recipeData.length; i++) {
+          if (typeof recipeData[i] === "object") {
+            let innerArray = recipeData[i];
+            for (j = 0; j < innerArray.length; j++) {
+              if (
+                recipes.includes({
+                  name: innerArray[j].title,
+                  url: innerArray[j].image,
+                }) === false
+              ) {
+                recipes.push({
+                  name: innerArray[j].title,
+                  url: innerArray[j].image,
+                });
+              }
+            }
+          }
+          if (
+            recipes.includes({
+              name: recipeData[i].title,
+              url: recipeData[i].image,
+            }) === false
+          ) {
+            recipes.push({
+              name: recipeData[i].title,
+              url: recipeData[i].image,
+            });
+          }
+        }
+
+        res.render("recipe-list", { recipes });
       });
   });
 });

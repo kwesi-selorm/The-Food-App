@@ -26,9 +26,9 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="h1-div"><h1>The Recipe App</h1></div>
+    <div class="h1-div container-fluid"><h1>The Recipe App</h1></div>
 
-    <div class="container">
+    <div class="container-fluid inputs">
       <form action="/" method="post">
         <!-- Ingredients input -->
         <div class="box col-md">
@@ -46,9 +46,10 @@
           <input
             type="number"
             name="number"
-            min="1"
+            min="2"
             max="100"
             placeholder="Number of recipes"
+            value="5"
             class="input-box form-control form-control-lg"
           />
         </div>
@@ -67,7 +68,7 @@
         </div>
 
         <!-- Submit button -->
-        <button class="btn btn-success" type="submit">Submit</button>
+        <button class="btn btn-success btn-lg" type="submit">Submit</button>
       </form>
     </div>
 
