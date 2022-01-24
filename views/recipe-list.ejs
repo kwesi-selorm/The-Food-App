@@ -26,7 +26,8 @@
   </head>
 
   <body>
-    <div class="h1-div container-fluid">
+    <!-- <div class="h1-div container-fluid"> -->
+    <div class="h1-div">
       <h1>Here are the recipes we fetched you,<br />ENJOY!</h1>
     </div>
 
@@ -36,19 +37,23 @@
       </button>
     </form>
 
-    <div class="col-md-4 container-fluid box">
-      <% recipes.forEach(function (recipe) { %>
+    <!-- <div class="col-md-4 container-fluid box"> -->
+    <div class="recipe-box">
+      
+        <% for(let i=0; i <recipes.length; i++) { %>
+        <div>
+          <p><%= recipes[i].name %></p>
 
-      <p><%= recipe.name %></p>
+          <img
+            src="<%=recipes[i].url%>"
+            class="img-fluid"
+            style="border-radius: 7px"
+            alt="recipe photo"
+          />
 
-      <img
-        src="<%=recipe.url%>"
-        class="img-fluid"
-        style="border-radius: 7px"
-        alt="recipe photo"
-      />
-
-      <% }) %>
+          <% } %>
+      </div>
+    
     </div>
   </body>
 </html>

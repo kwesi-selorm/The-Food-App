@@ -10,10 +10,6 @@ body {
   text-align: center;
 }
 
-.container {
-  padding: 15px 80px;
-}
-
 .h1-div {
   border-radius: 20px;
   margin: auto;
@@ -34,21 +30,19 @@ h1 {
   font-size: 3vw;
 }
 
-.box {
+.recipe-box {
+  display: flexbox;
+  flex-direction: row;
   border-radius: 20px;
-  background: -webkit-linear-gradient(55deg, #fff1bd 50%, #a3da8d 50%);
-  margin: 20px auto 20px;
-  padding: 3% auto 5%;
   text-align: center;
-  width: 50vw;
 }
 
 p {
-  font-size: 3vw;
+  background-color: #184d47;
+  color: #fff;
+  font-size: 1.2rem;
   font-weight: 600;
-  padding-top: 7%;
-}
-
-p:hover {
-  font-size: 3.2vw;
+  margin: 5% auto 1%;
+  padding: 2px 5px;
+  width: fit-content;
 }

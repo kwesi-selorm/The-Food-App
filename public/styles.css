@@ -83,6 +83,11 @@ h1 {
   margin-bottom: 10px;
 }
 
+.recipe-box {
+  display: flex;
+  flex-direction: row;
+}
+
 /* Mobile screen size */
 @media (max-width: 400px) {
   .input-box {
