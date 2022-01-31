@@ -1,11 +1,12 @@
 body {
-  background: url("recipe.jpg");
+  /* background: url("recipe.jpg"); */
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-color: #519259;
   font-family: Nunito;
+  margin-bottom: 20px;
   padding-top: 2%;
   text-align: center;
 }
